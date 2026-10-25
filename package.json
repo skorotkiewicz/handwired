@@ -3,6 +3,14 @@
   "version": "0.1.1",
   "description": "Build and evaluate differentiable numeric circuits with exact FP32 semantics.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skorotkiewicz/handwired.git"
+  },
+  "homepage": "https://github.com/skorotkiewicz/handwired#readme",
+  "bugs": {
+    "url": "https://github.com/skorotkiewicz/handwired/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
