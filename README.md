@@ -14,7 +14,7 @@ not include the JSON search demo's WebGPU backend.
 Install the package tarball:
 
 ```sh
-npm install ./skorotkiewicz-handwired-0.1.0.tgz
+npm install @skorotkiewicz/handwired
 ```
 
 ES modules only; Node.js 20+ or a modern browser bundler. TypeScript declarations
