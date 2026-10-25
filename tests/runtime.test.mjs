@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict'
 import {test} from 'node:test'
-import {Circuit, createEvaluator, createSourceTable, emitCompare, emitSelect, event, input, stateBit} from 'handwired'
-import {Circuit as CoreCircuit} from 'handwired/core'
-import {createSourceTable as createTable} from 'handwired/cells'
-import {identitySpringMatrix, springMatrixPower} from 'handwired/host-timing'
-import {brentKungPrefix, sklanskyPrefix} from 'handwired/prefix-networks'
+import {Circuit, createEvaluator, createSourceTable, emitCompare, emitSelect, event, input, stateBit} from '@skorotkiewicz/handwired'
+import {Circuit as CoreCircuit} from '@skorotkiewicz/handwired/core'
+import {createSourceTable as createTable} from '@skorotkiewicz/handwired/cells'
+import {identitySpringMatrix, springMatrixPower} from '@skorotkiewicz/handwired/host-timing'
+import {brentKungPrefix, sklanskyPrefix} from '@skorotkiewicz/handwired/prefix-networks'
 
 test('root and subpath exports share the same implementation', () => {
   assert.equal(Circuit, CoreCircuit)

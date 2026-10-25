@@ -1,5 +1,5 @@
 {
-  "name": "handwired",
+  "name": "@skorotkiewicz/handwired",
   "version": "0.1.0",
   "description": "Build and evaluate differentiable numeric circuits with exact FP32 semantics.",
   "license": "MIT",
@@ -30,6 +30,9 @@
   },
   "files": ["dist"],
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=20"
   },

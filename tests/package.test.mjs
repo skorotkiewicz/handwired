@@ -14,6 +14,8 @@ test('tarball installs independently and exposes working JavaScript and types', 
   const run = (command, args, cwd = directory) => execFileSync(command, args, {cwd, encoding: 'utf8', stdio: 'pipe'})
   try {
     const [packed] = JSON.parse(run(npm, ['pack', '--json', '--ignore-scripts', '--pack-destination', directory], root))
+    assert.equal(packed.name, '@skorotkiewicz/handwired')
+    assert.equal(packed.filename, 'skorotkiewicz-handwired-0.1.0.tgz')
     const files = packed.files.map(file => file.path)
     assert.ok(files.includes('LICENSE'))
     assert.ok(files.includes('README.md'))

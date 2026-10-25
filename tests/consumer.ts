@@ -1,8 +1,8 @@
-import {Circuit, createEvaluator, createSourceTable, input, type Wire} from 'handwired'
-import {Circuit as CoreCircuit} from 'handwired/core'
-import {stateBit} from 'handwired/cells'
-import {springMatrixPower} from 'handwired/host-timing'
-import {sklanskyPrefix} from 'handwired/prefix-networks'
+import {Circuit, createEvaluator, createSourceTable, input, type Wire} from '@skorotkiewicz/handwired'
+import {Circuit as CoreCircuit} from '@skorotkiewicz/handwired/core'
+import {stateBit} from '@skorotkiewicz/handwired/cells'
+import {springMatrixPower} from '@skorotkiewicz/handwired/host-timing'
+import {sklanskyPrefix} from '@skorotkiewicz/handwired/prefix-networks'
 
 const table = createSourceTable()
 const cells = table.declare({value: input([0, 10])})

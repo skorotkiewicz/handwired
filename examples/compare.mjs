@@ -1,4 +1,4 @@
-import {createEvaluator, createSourceTable, emitCompare, emitSelect, input} from 'handwired'
+import {createEvaluator, createSourceTable, emitCompare, emitSelect, input} from '@skorotkiewicz/handwired'
 
 const table = createSourceTable()
 const cells = table.declare({a: input([0, 100], {initial: 5, grid: 1})})
