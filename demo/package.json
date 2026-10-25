@@ -1,0 +1,21 @@
+{
+  "name": "handwired-counter-demo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test counter.test.mjs"
+  },
+  "dependencies": {
+    "@skorotkiewicz/handwired": "0.1.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

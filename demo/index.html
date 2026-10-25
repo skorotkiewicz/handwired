@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f5f0">
+    <title>Handwired counter</title>
+    <link rel="icon" href="data:,">
+    <script type="module" src="/main.mjs"></script>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">A little Handwired experiment</p>
+      <h1>Small counter.<br>Numeric circuit.</h1>
+      <p class="intro">The buttons are ordinary HTML. The state changes run through Handwired.</p>
+
+      <section class="counter" aria-label="Interactive counter">
+        <label for="count">Current count</label>
+        <output id="count" aria-live="polite" aria-atomic="true">0</output>
+        <p>Always between 0 and <span id="maximum">20</span>.</p>
+        <div class="controls">
+          <button id="decrement" type="button" aria-label="Decrease count by one" disabled>−1</button>
+          <button id="increment" type="button" aria-label="Increase count by one">+1</button>
+        </div>
+        <button id="reset" type="button" disabled>Reset to zero</button>
+      </section>
+
+      <details>
+        <summary>What’s happening?</summary>
+        <p>Each click sets an event cell to 1. The circuit computes the next count, then resets the event cells to 0. JavaScript commits the new state and updates the page.</p>
+        <pre><code>changed = count + increment − decrement
+bounded = clamp(changed, 0, 20)
+next    = reset ? 0 : bounded</code></pre>
+        <p>That’s builder logic expressed as weighted sums, ReLUs and numeric selection—not a JavaScript counter hidden behind the buttons.</p>
+      </details>
+
+      <footer>Using <code>@skorotkiewicz/handwired@0.1.1</code> from npm. Just for us.</footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #202b29;
+  background: #f6f5f0;
+  font-synthesis: none;
+  line-height: 1.6;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+main {
+  width: min(100% - 2.5rem, 34rem);
+  margin: 0 auto;
+  padding: 4rem 0 2rem;
+}
+
+.eyebrow {
+  color: #42635b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.intro { color: #52615c; max-width: 28rem; }
+
+.counter {
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid #d7ded7;
+  border-radius: 1.5rem;
+  background: #fffefb;
+  text-align: center;
+}
+
+.counter label { font-size: 0.875rem; font-weight: 600; }
+
+output {
+  display: block;
+  font-size: 6rem;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter p { margin: 0 0 1.5rem; color: #52615c; font-size: 0.875rem; }
+
+.controls { display: flex; gap: 0.75rem; }
+
+button {
+  min-height: 3rem;
+  border: 1px solid #bdc9c2;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.controls button { flex: 1; font-size: 1.5rem; }
+
+#increment { background: #245c4c; color: #fff; border-color: #245c4c; }
+
+#reset { margin-top: 1rem; padding: 0.25rem 1rem; font-size: 0.875rem; }
+
+button:hover:not(:disabled) { filter: brightness(0.92); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+button:focus-visible, summary:focus-visible { outline: 3px solid #245c4c; outline-offset: 4px; }
+
+summary { cursor: pointer; font-weight: 600; }
+details p { color: #52615c; font-size: 0.875rem; }
+pre { overflow-x: auto; padding: 1rem; background: #e9ede6; border-radius: 0.75rem; font-size: 0.75rem; }
+footer { margin-top: 2rem; color: #52615c; font-size: 0.75rem; }
+footer code { overflow-wrap: anywhere; }
+
+@media (max-width: 400px) {
+  main { padding-top: 2rem; }
+  .counter { padding: 1.5rem; }
+}
